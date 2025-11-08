@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
   name: frontend-netpol
-  namespace: daniel-lopez-fisag-dev
+  namespace: {{ .Values.namespace }}
 spec:
   podSelector:
     matchLabels:
@@ -37,7 +37,7 @@ apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
   name: backend-api-netpol
-  namespace: daniel-lopez-fisag-dev
+  namespace: {{ .Values.namespace }}
 spec:
   podSelector:
     matchLabels:
@@ -79,7 +79,7 @@ apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
   name: backend-data-netpol
-  namespace: daniel-lopez-fisag-dev
+  namespace: {{ .Values.namespace }}
 spec:
   podSelector:
     matchLabels:
@@ -117,7 +117,7 @@ apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
   name: database-netpol
-  namespace: daniel-lopez-fisag-dev
+  namespace: {{ .Values.namespace }}
 spec:
   podSelector:
     matchLabels:
