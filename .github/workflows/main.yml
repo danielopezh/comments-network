@@ -28,4 +28,4 @@ jobs:
 
       - name: Deploy Network Policies
         run: |
-          helm upgrade --install network-policies oci://registry-1.docker.io/${{ secrets.DOCKER_USERNAME }}/comments-chart --version 15 --values values.yaml
+          helm upgrade --install network-policies oci://registry-1.docker.io/danielopezh/comments-chart --version 15 --values values.yaml
