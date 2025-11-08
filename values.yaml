@@ -1,10 +1,13 @@
 name: network-policies
 namespace: daniel-lopez-fisag-dev
 
-# Disable microservice components
+# Dummy values to avoid template errors
 image:
-  repository: ""
-  tag: ""
+  repository: dummy
+  tag: dummy
+replicas: 0
+
+# Disable all microservice components
 service:
   enabled: false
 route:
