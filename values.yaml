@@ -1,1 +1,19 @@
+name: network-policies
 namespace: daniel-lopez-fisag-dev
+
+# Disable microservice components
+image:
+  repository: ""
+  tag: ""
+service:
+  enabled: false
+route:
+  enabled: false
+hpa:
+  enabled: false
+statefulset:
+  enabled: false
+
+# Enable network policies
+networkPolicies:
+  enabled: true
